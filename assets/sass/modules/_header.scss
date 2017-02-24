@@ -1,0 +1,66 @@
+header {
+  padding: 25px 25px 0 25px;
+  .home & {
+    z-index: 100;
+    position: relative;
+  }
+  .site-branding {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(assets/imgs/sr-logo.png) no-repeat top right;
+    background-size: 100px 100px;
+    float: right;
+    .home & {
+      padding: 0;
+      float: right;
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+nav {
+  display: inline-block;
+  a {
+    padding-bottom: 2px;
+    &:hover {
+      border-bottom: 1px solid;
+      border-color: $link-color;
+      text-decoration: none;
+    }
+  }
+  li.current-menu-item a {
+    border-bottom: 1px solid;
+    border-color: $link-color;
+    text-decoration: none;
+  }
+  .home & {
+    a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        border-color: $white;
+      }
+    }
+  }
+  &#site-navigation {
+
+    ul {
+      position:relative;
+      z-index: 100;
+      list-style: none;
+      @media (min-width: 600px) {
+        margin: 35px 0;
+      }
+      li {
+        @media (min-width: 600px) {
+          display: inline-block;
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}

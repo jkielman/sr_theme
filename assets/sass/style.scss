@@ -1,0 +1,24 @@
+@import 'partials/all';
+@import 'modules/all';
+body {
+
+  font-family: $bodyType;
+}
+
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:link {
+    -webkit-tap-highlight-color: #111111;
+  }
+}
+
+@media print {
+  article a[href^="/"]:after {
+    content: " (http://jeffkielman.com" attr(href) ") ";
+  }
+}
